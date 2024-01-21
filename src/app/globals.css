@@ -1,8 +1,67 @@
+@font-face {
+  font-family: "Acari Sans Neue";
+  src: url("/font/acari-sans-neue-thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acari Sans Neue";
+  src: url("/font/acari-sans-neue-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acari Sans Neue";
+  src: url("/font/acari-sans-neue-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acari Sans Neue";
+  src: url("/font/acari-sans-neue-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acari Sans Neue";
+  src: url("/font/acari-sans-neue-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acari Sans Neue";
+  src: url("/font/acari-sans-neue-black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 :root {
+  --mob-menu-bg: #c0c0c03b;
+
+  --body-bg: #ffffff;
+
+  --primary-bg: #c0c0c0;
+  --secondary-bg: #e4e4e4;
+  --colored-bg: ;
+
+  --fc-primary: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --body-bg: #121214;
+
+    --primary-bg: #121214;
+    --secondary-bg: #151519;
+    --colored-bg: #734bd1;
+
+    --fc-primary: #e1e1e6;
+    --fc-secondary: #a8a8b3;
   }
 }
 
@@ -15,7 +74,13 @@
 html,
 body {
   max-width: 100vw;
+  font-size: 10px;
   overflow-x: hidden;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: "Acari Sans Neue";
 }
 
 a {
@@ -23,7 +88,8 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
