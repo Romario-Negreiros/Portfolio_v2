@@ -49,6 +49,8 @@
   --color-secondary: #e4e4e4;
   --color-tertiary: #9432b5;
 
+  --indicator-danger: #da2323;
+
   --fc-primary: #000000;
   --fc-secondary: #c0c0c0;
 }
