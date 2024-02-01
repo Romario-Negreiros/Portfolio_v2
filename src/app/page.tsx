@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import styles from "./page.module.css";
 import StartIcon from "@/components/svg/StartIcon";
@@ -14,7 +14,7 @@ import LogoIcon from "@/components/svg/LogoIcon";
 import SearchIcon from "@/components/svg/SearchIcon";
 import ClearIcon from "@/components/svg/ClearIcon";
 
-function setPurpleBorder() {
+function setBorderOnSearch() {
   document.querySelector("." + styles.search)?.classList.toggle(styles["search--focused"]);
 }
 
@@ -33,6 +33,16 @@ export default function Home() {
     console.log("searchada");
   }
 
+  useEffect(() => {
+    window.addEventListener("resize", (event: WindowEventMap["resize"]) => {
+      if (window.innerWidth > 769) {
+        if (document.querySelector("." + styles["navigation--visible"])) {
+          document.querySelector("." + styles["navigation--visible"])!.classList.remove(styles["navigation--visible"]);
+        }
+      }
+    });
+  });
+
   return (
     <main className={styles.container}>
       <header className={styles.header}>
@@ -44,8 +54,8 @@ export default function Home() {
         <div className={styles.logo}>
           <LogoIcon color="#c0c0c0" width={20} />
         </div>
-        <form className={styles.search} onSubmit={onSearchSubmit}>
-          <input name="search" placeholder="Agilize..." onFocus={setPurpleBorder} onBlur={setPurpleBorder} />
+        <form className={styles.search} autoComplete="off" onSubmit={onSearchSubmit}>
+          <input name="search" placeholder="Agilize..." onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
           <div>
             <button className={styles.search_clear}>
               <ClearIcon color="#c0c0c0" />
@@ -65,7 +75,7 @@ export default function Home() {
             </li>
             <li className={styles.navigation_item}>
               <Link href="">
-                <span>Sobre mim</span>
+                <span>Sobre</span>
                 <AboutMeIcon color="#c0c0c0" width={16} />
               </Link>
             </li>
