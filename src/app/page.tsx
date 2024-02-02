@@ -39,6 +39,18 @@ export default function Home() {
         if (document.querySelector("." + styles["navigation--visible"])) {
           document.querySelector("." + styles["navigation--visible"])!.classList.remove(styles["navigation--visible"]);
         }
+
+        if (document.querySelector(".body--noOverflow")) {
+          document.querySelector("body")!.classList.remove("body--noOverflow");
+        }
+
+        if (document.querySelector("." + styles["menu--opened"])) {
+          document.querySelector("." + styles["menu--opened"])!.classList.remove(styles["menu--opened"]);
+        }
+
+        if (isMenuOpened) {
+          setIsMenuOpened(false)
+        }
       }
     });
   });
