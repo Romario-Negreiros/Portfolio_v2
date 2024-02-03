@@ -45,9 +45,13 @@
 
   --body-bg: #ffffff;
 
-  --color-primary: #c0c0c0;
-  --color-secondary: #e4e4e4;
-  --color-tertiary: #9432b5;
+  --bg-primary: #c0c0c0;
+  --bg-secondary: #e4e4e4;
+
+  --border-primary: #c0c0c0;
+  --border-secondary: #e4e4e4;
+
+  --color-primary: #9432b5;
 
   --indicator-danger: #da2323;
 
@@ -57,14 +61,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-bg: #121214;
+    --body-bg: linear-gradient(-45deg, #101010 5%, #000000 50%);
 
-    --color-primary: #121214;
-    --color-secondary: #151519;
-    --color-tertiary: #734bd1;
+    --bg-primary: #121214;
+    --bg-secondary: #151519;
+
+    --border-primary: #a8a8b3;
+
+    --color-primary: #734bd1;
 
     --fc-primary: #e1e1e6;
-    --fc-secondary: #a8a8b3;
+    --fc-secondary: #dedede;
   }
 }
 
@@ -81,7 +88,7 @@ body {
 }
 
 body {
-  background-color: var(--body-bg);
+  background: var(--body-bg);
   font-family: "Acari Sans Neue";
 }
 
