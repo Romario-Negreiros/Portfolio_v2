@@ -13,6 +13,9 @@
         "sourceType": "module"
     },
     "plugins": ["react"],
+    "ignorePatterns": [
+        "scripts"
+    ],
     "rules": {
         "@typescript-eslint/space-before-function-paren": 0,
         "@typescript-eslint/quotes": 0,
