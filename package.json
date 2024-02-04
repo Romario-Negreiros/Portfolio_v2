@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "npx prettier --write ./src"
+    "prettier": "npx prettier --write ./src",
+    "push": "ts-node --project ./scripts/tsconfig.json ./scripts/workflow.ts"
   },
   "dependencies": {
     "next": "14.0.4",
-    "prettier": "^3.2.4",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -27,6 +27,8 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.2.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }
