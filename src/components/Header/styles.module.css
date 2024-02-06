@@ -81,12 +81,16 @@
   width: 80%;
   height: 28px;
   font-size: 15px;
-  background-color: transparent;
+  background-color: var(--input-bg);
   color: var(--fc-primary);
 }
 
-.search input::placeholder {
-  color: var(--fc-secondary);
+.search:has(+ .navigation--visible) input {
+  background-color: var(--color-primary);
+}
+
+.search:has(+ .navigation--visible) input::placeholder {
+  color: #c0c0c0;
 }
 
 .search:hover,
