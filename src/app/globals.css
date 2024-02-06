@@ -44,6 +44,7 @@
   --element-bg: #c0c0c03b;
 
   --body-bg: #ffffff;
+  --input-bg: #ffffff;
 
   --bg-primary: #c0c0c0;
   --bg-secondary: #e4e4e4;
@@ -62,6 +63,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --body-bg: linear-gradient(-45deg, #101010 5%, #000000 50%);
+    --input-bg: #000000;
 
     --bg-primary: #121214;
     --bg-secondary: #151519;
