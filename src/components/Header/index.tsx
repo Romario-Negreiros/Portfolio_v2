@@ -8,11 +8,16 @@ import ProjectsIcon from "@/components/svg/ProjectsIcon";
 import BlogIcon from "@/components/svg/BlogIcon";
 import ContactIcon from "@/components/svg/ContactIcon";
 import LogoIcon from "@/components/svg/LogoIcon";
-import Search from "../AppSearch";
+import SearchIcon from "@/components/svg/SearchIcon";
+import ClearIcon from "@/components/svg/ClearIcon";
 
 import Link from "next/link";
 
 import styles from "./styles.module.css";
+
+function setBorderOnSearch() {
+  document.querySelector("." + styles.search)?.classList.toggle(styles["search--focused"]);
+}
 
 export default function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
@@ -21,6 +26,12 @@ export default function Header() {
     document.querySelector("body")?.classList.toggle("body--noOverflow");
 
     setIsMenuOpened(!isMenuOpened);
+  }
+
+  function onSearchSubmit(event: React.FormEvent) {
+    event.preventDefault();
+
+    console.log("searchada");
   }
 
   useEffect(() => {
@@ -55,8 +66,18 @@ export default function Header() {
       <div className={styles.logo}>
         <LogoIcon color="#c0c0c0" width={20} />
       </div>
-      <Search />
-      <nav className={`${styles.navigation} ${isMenuOpened && styles["navigation--visible"]}`}>
+      <form className={styles.search} autoComplete="off" onSubmit={onSearchSubmit}>
+        <input name="search" placeholder="Agilize..." onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
+        <div>
+          <button className={styles.search_clear}>
+            <ClearIcon color="#c0c0c0" />
+          </button>
+          <button className={styles.search_enter} type="submit">
+            <SearchIcon color="#c0c0c0" />
+          </button>
+        </div>
+      </form>
+      <nav className={`${styles.navigation} ${(isMenuOpened ? null : "") ?? styles["navigation--v"]}`}>
         <ul>
           <li className={styles.navigation_item}>
             <Link href="">
