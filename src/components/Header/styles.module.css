@@ -21,7 +21,7 @@
   padding: 180px 15px;
   transform: translateX(-800px);
   transition: transform 0.3s ease;
-  background-color: var(--color-primary);
+  background-color: var(--color-tertiary);
 }
 
 .navigation ul {
@@ -37,8 +37,12 @@
   padding: 20px 3px 5px;
   font-size: 1em;
   font-weight: 500;
-  border-bottom: 2px solid var(--border-primary);
-  color: var(--fc-secondary);
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.navigation a svg {
+  color: var(--color-tertiary);
 }
 
 .navigation a:hover,
@@ -48,6 +52,20 @@
 
 .navigation--visible {
   transform: translateX(0);
+}
+
+.navigation--visible a,
+.navigation--visible a svg {
+  color: var(--mob-menu);
+  border-bottom-color: var(--mob-menu);
+}
+
+.navigation--visible a:hover,
+.navigation--visible a:focus,
+.navigation--visible a:hover svg,
+.navigation--visible a:focus svg {
+  color: var(--mob-menu-active);
+  border-bottom-color: var(--mob-menu);
 }
 
 .logo {
@@ -61,6 +79,10 @@
   background-color: var(--element-bg);
 }
 
+.logo svg {
+  color: var(--color-primary);
+}
+
 .search {
   display: flex;
   justify-content: space-between;
@@ -71,7 +93,7 @@
   width: 100%;
   padding: 0 10px;
   height: 34px;
-  border: 2px solid var(--border-primary);
+  border: 2px solid var(--color-primary);
   border-radius: 5px;
 }
 
@@ -81,21 +103,13 @@
   width: 80%;
   height: 28px;
   font-size: 15px;
-  background-color: var(--input-bg);
+  background-color: transparent;
   color: var(--fc-primary);
-}
-
-.search:has(+ .navigation--visible) input {
-  background-color: var(--color-primary);
-}
-
-.search:has(+ .navigation--visible) input::placeholder {
-  color: #c0c0c0;
 }
 
 .search:hover,
 .search--focused {
-  border-color: var(--color-primary);
+  border-color: var(--color-tertiary);
 }
 
 .search div {
@@ -115,6 +129,7 @@
 
 .search button svg {
   width: 17px;
+  color: var(--color-primary);
 }
 
 .search .search_clear svg {
@@ -122,21 +137,35 @@
 }
 
 .search button:hover svg {
-  color: var(--color-primary);
+  color: var(--color-tertiary);
 }
 
 .search .search_clear:hover svg {
   color: var(--indicator-danger);
 }
 
-.search:has(+ .navigation--visible):hover,
-.search--focused:has(+ .navigation--visible) {
-  border-color: #e4e4e4;
+.search:has(+ .navigation--visible) {
+  border-color: var(--mob-menu);
 }
 
-.search:has(+ .navigation--visible) .search_enter:hover svg,
+.search:has(+ .navigation--visible) svg {
+  color: var(--mob-menu);
+}
+
+.search:has(+ .navigation--visible):hover,
+.search--focused:has(+ .navigation--visible) {
+  border-color: var(--mob-menu-active);
+}
+.search:has(+ .navigation--visible) input::placeholder {
+  color: var(--mob-menu);
+}
+
+.search:has(+ .navigation--visible) .search_enter:hover svg {
+  color: var(--mob-menu-active);
+}
+
 .search:has(+ .navigation--visible) input {
-  color: #e4e4e4;
+  color: var(--mob-menu-active);
 }
 
 .menu {
@@ -158,7 +187,7 @@
 .menu div {
   width: 20px;
   height: 3px;
-  background-color: #c0c0c0;
+  background-color: var(--color-primary);
   transition: transform 0.3s ease;
   border-radius: 3px;
 }
@@ -177,6 +206,14 @@
 
 .menu--opened .barThree {
   transform: translate(-0.2px, -3px) rotate(225deg);
+}
+
+.menu--opened div {
+  background-color: var(--mob-menu-active);
+}
+
+.menu--opened + .logo svg {
+  color: var(--mob-menu-active);
 }
 
 @media screen and (min-width: 350px) {
@@ -226,8 +263,8 @@
   .navigation a:hover,
   .navigation a:focus {
     backdrop-filter: unset;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: var(--color-tertiary);
+    border-color: var(--color-tertiary);
   }
 
   .navigation svg {

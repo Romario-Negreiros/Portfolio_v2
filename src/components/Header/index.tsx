@@ -20,7 +20,7 @@ function setBorderOnSearch() {
 }
 
 export default function Header() {
-  const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   function handleMenuOpened() {
     document.querySelector("body")?.classList.toggle("body--noOverflow");
@@ -64,49 +64,53 @@ export default function Header() {
         <div className={styles.barThree}></div>
       </div>
       <div className={styles.logo}>
-        <LogoIcon color="#c0c0c0" width={20} />
+        <LogoIcon width={20} />
       </div>
       <form className={styles.search} autoComplete="off" onSubmit={onSearchSubmit}>
-        <input name="search" placeholder="Agilize..." onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
+        <input
+          name="search"
+          onFocus={setBorderOnSearch}
+          onBlur={setBorderOnSearch}
+        />
         <div>
           <button className={styles.search_clear}>
-            <ClearIcon color="#c0c0c0" />
+            <ClearIcon />
           </button>
           <button className={styles.search_enter} type="submit">
-            <SearchIcon color="#c0c0c0" />
+            <SearchIcon />
           </button>
         </div>
       </form>
-      <nav className={`${styles.navigation} ${(isMenuOpened ? null : "") ?? styles["navigation--v"]}`}>
+      <nav className={`${styles.navigation} ${isMenuOpened && styles["navigation--visible"]}`}>
         <ul>
           <li className={styles.navigation_item}>
             <Link href="">
               <span>Início</span>
-              <StartIcon color="#c0c0c0" width={19} />
+              <StartIcon width={19} />
             </Link>
           </li>
           <li className={styles.navigation_item}>
             <Link href="">
               <span>Sobre</span>
-              <AboutMeIcon color="#c0c0c0" width={16} />
+              <AboutMeIcon width={16} />
             </Link>
           </li>
           <li className={styles.navigation_item}>
             <Link href="">
               <span>Projetos</span>
-              <ProjectsIcon color="#c0c0c0" width={18} />
+              <ProjectsIcon width={18} />
             </Link>
           </li>
           <li className={styles.navigation_item}>
             <Link href="">
               <span>Blog</span>
-              <BlogIcon color="#c0c0c0" width={18} />
+              <BlogIcon width={18} />
             </Link>
           </li>
           <li className={styles.navigation_item}>
             <Link href="">
               <span>Contato</span>
-              <ContactIcon color="#c0c0c0" width={18} />
+              <ContactIcon width={18} />
             </Link>
           </li>
         </ul>
