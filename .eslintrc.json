@@ -30,6 +30,8 @@
         
         "semi": "off",
 
-        "react/react-in-jsx-scope": 0
+        "react/react-in-jsx-scope": 0,
+
+        "multiline-ternary": 0
     }
 }

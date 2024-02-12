@@ -1,0 +1,18 @@
+{
+  "lang": "en",
+  "pages": {
+    "home": "hello worldzin!"
+  },
+  "components": {
+    "header": {
+      "nav": [
+        "Start",
+        "About",
+        "Projects",
+        "Experience",
+        "Contact",
+        "Blog"
+      ]
+    }
+  }
+}

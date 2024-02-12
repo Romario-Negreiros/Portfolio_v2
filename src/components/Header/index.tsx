@@ -103,14 +103,14 @@ export default function Header() {
           </li>
           <li className={styles.navigation_item}>
             <Link href="">
-              <span>Blog</span>
-              <BlogIcon width={18} />
+              <span>Contato</span>
+              <ContactIcon width={18} />
             </Link>
           </li>
           <li className={styles.navigation_item}>
             <Link href="">
-              <span>Contato</span>
-              <ContactIcon width={18} />
+              <span>Blog</span>
+              <BlogIcon width={18} />
             </Link>
           </li>
         </ul>
