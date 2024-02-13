@@ -1,10 +1,10 @@
 {
   "lang": {
-    "attr": "en",
-    "name": "English"
+    "attr": "pt-BR",
+    "name": "Português"
   },
   "pages": {
-    "home": "hello worldzin!"
+    "home": "oi world!"
   },
   "components": {
     "header": {
@@ -19,11 +19,11 @@
         }
       ],
       "nav": [
-        "Start",
-        "About",
-        "Projects",
-        "Experience",
-        "Contact",
+        "Início",
+        "Sobre",
+        "Projetos",
+        "Experiência",
+        "Contato",
         "Blog"
       ]
     }
