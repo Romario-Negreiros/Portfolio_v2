@@ -3,12 +3,19 @@ import { createContext } from "react";
 import type { SetStateAction, Dispatch } from "react";
 
 export interface ILanguage {
-  lang: string;
+  lang: {
+    attr: string;
+    name: string;
+  };
   pages: {
     home: string;
   };
   components: {
     header: {
+      langSwitch: Array<{
+        attr: string;
+        name: string;
+      }>;
       nav: string[];
     };
   };
@@ -19,14 +26,18 @@ export interface ILanguageContext {
   setLanguage: Dispatch<SetStateAction<ILanguage | null>>;
 }
 
-const defaultContextValue = {
+const defaultContextValue: ILanguageContext = {
   language: {
-    lang: "",
+    lang: {
+      attr: "",
+      name: "",
+    },
     pages: {
       home: "",
     },
     components: {
       header: {
+        langSwitch: [],
         nav: [],
       },
     },

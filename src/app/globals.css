@@ -58,6 +58,7 @@
   --indicator-danger: #da2323;
 
   --fc-primary: #000000;
+  --fc-secondary: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,6 +71,7 @@
     --color-tertiary: #9c53dc;
 
     --fc-primary: #e1e1e6;
+    --fc-secondary: #000000;
   }
 }
 
@@ -105,10 +107,17 @@ ol {
   list-style: none;
 }
 
+button {
+  background-color: unset;
+  outline: 0;
+  border: 0;
+}
+
 .page-container {
   margin-top: 64px;
   padding: 0 15px;
   min-height: calc(100vh - 64px);
+  z-index: 0;
 }
 
 .page-center {
@@ -121,6 +130,8 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: -1;
 }
 
 .spinner::after {

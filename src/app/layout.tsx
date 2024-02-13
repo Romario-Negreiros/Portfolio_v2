@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
-      <html lang={language?.lang}>
+      <html lang={language?.lang.attr}>
         <head>
           <title>Romario Negreiros</title>
         </head>

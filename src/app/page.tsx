@@ -3,13 +3,19 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+const supportedLanguages = ["pt-BR", "en"];
+
 export default function Redirect() {
   const { push } = useRouter();
 
   useEffect(() => {
-    const lang = navigator.language.substring(0, 2);
+    const lang = navigator.language;
 
-    push("/" + lang);
+    if (supportedLanguages.some((supLang) => supLang === lang)) {
+      push("/" + lang);
+    } else {
+      push("/en");
+    }
   }, [push]);
 
   return (

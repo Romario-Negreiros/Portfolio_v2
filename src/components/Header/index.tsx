@@ -1,16 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
-import StartIcon from "@/components/svg/StartIcon";
-import AboutMeIcon from "@/components/svg/AboutMeIcon";
-import ProjectsIcon from "@/components/svg/ProjectsIcon";
-import BlogIcon from "@/components/svg/BlogIcon";
-import ContactIcon from "@/components/svg/ContactIcon";
-import LogoIcon from "@/components/svg/LogoIcon";
-import SearchIcon from "@/components/svg/SearchIcon";
-import ClearIcon from "@/components/svg/ClearIcon";
+import LanguageContext from "@/shared/state/LanguageContext";
 
+import {
+  StartIcon,
+  AboutMeIcon,
+  ProjectsIcon,
+  BlogIcon,
+  ContactIcon,
+  LogoIcon,
+  SearchIcon,
+  ClearIcon,
+  LanguageIcon,
+} from "..";
 import Link from "next/link";
 
 import styles from "./styles.module.css";
@@ -19,8 +23,28 @@ function setBorderOnSearch() {
   document.querySelector("." + styles.search)?.classList.toggle(styles["search--focused"]);
 }
 
+function openLanguageSelection() {
+  document.querySelector("." + styles.language_list)?.classList.toggle(styles["language_list--opened"]);
+}
+
+function renderIcon(index: number) {
+  switch (index) {
+    case 0:
+      return <StartIcon width={19} />;
+    case 1:
+      return <AboutMeIcon width={16} />;
+    case 2:
+      return <ProjectsIcon width={18} />;
+    case 3:
+      return <ContactIcon width={18} />;
+    case 4:
+      return <BlogIcon width={18} />;
+  }
+}
+
 export default function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const { language } = useContext(LanguageContext);
 
   function handleMenuOpened() {
     document.querySelector("body")?.classList.toggle("body--noOverflow");
@@ -59,19 +83,29 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`${styles.menu} ${isMenuOpened && styles["menu--opened"]}`} onClick={handleMenuOpened}>
-        <div className={styles.barOne}></div>
-        <div className={styles.barTwo}></div>
-        <div className={styles.barThree}></div>
+        <div className={styles.bar_one}></div>
+        <div className={styles.bar_two}></div>
+        <div className={styles.bar_three}></div>
+      </div>
+      <div className={styles.language_switcher}>
+        <button type="button" onClick={openLanguageSelection}>
+          <LanguageIcon height={25} />
+        </button>
+        <ul className={styles.language_list}>
+          {language?.components.header.langSwitch.map((item) => (
+            <li key={item.name}>
+              <Link href={"/" + item.attr} onClick={openLanguageSelection}>
+                <span>{item.name}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className={styles.logo}>
         <LogoIcon width={20} />
       </div>
       <form className={styles.search} autoComplete="off" onSubmit={onSearchSubmit}>
-        <input
-          name="search"
-          onFocus={setBorderOnSearch}
-          onBlur={setBorderOnSearch}
-        />
+        <input name="search" onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
         <div>
           <button className={styles.search_clear}>
             <ClearIcon />
@@ -83,36 +117,14 @@ export default function Header() {
       </form>
       <nav className={`${styles.navigation} ${isMenuOpened && styles["navigation--visible"]}`}>
         <ul>
-          <li className={styles.navigation_item}>
-            <Link href="">
-              <span>Início</span>
-              <StartIcon width={19} />
-            </Link>
-          </li>
-          <li className={styles.navigation_item}>
-            <Link href="">
-              <span>Sobre</span>
-              <AboutMeIcon width={16} />
-            </Link>
-          </li>
-          <li className={styles.navigation_item}>
-            <Link href="">
-              <span>Projetos</span>
-              <ProjectsIcon width={18} />
-            </Link>
-          </li>
-          <li className={styles.navigation_item}>
-            <Link href="">
-              <span>Contato</span>
-              <ContactIcon width={18} />
-            </Link>
-          </li>
-          <li className={styles.navigation_item}>
-            <Link href="">
-              <span>Blog</span>
-              <BlogIcon width={18} />
-            </Link>
-          </li>
+          {language?.components.header.nav.map((item, index) => (
+            <li key={item} className={styles.navigation_item}>
+              <Link href="">
+                <span>{item}</span>
+                {renderIcon(index)}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

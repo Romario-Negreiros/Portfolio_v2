@@ -71,7 +71,7 @@
 .logo {
   display: grid;
   place-items: center;
-  z-index: 1;
+  z-index: 2;
   order: 2;
   height: 34px;
   padding: 0 10px;
@@ -89,7 +89,7 @@
   align-items: center;
   gap: 5px;
   order: 3;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   padding: 0 10px;
   height: 34px;
@@ -192,19 +192,19 @@
   border-radius: 3px;
 }
 
-.menu .barTwo {
+.menu .bar_two {
   width: 13px;
 }
 
-.menu--opened .barOne {
+.menu--opened .bar_one {
   transform: translate(-0.2px, 3px) rotate(135deg);
 }
 
-.menu--opened .barTwo {
+.menu--opened .bar_two {
   display: none;
 }
 
-.menu--opened .barThree {
+.menu--opened .bar_three {
   transform: translate(-0.2px, -3px) rotate(225deg);
 }
 
@@ -214,6 +214,74 @@
 
 .menu--opened + .logo svg {
   color: var(--mob-menu-active);
+}
+
+.language_switcher {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.language_switcher button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: var(--element-bg);
+  cursor: pointer;
+}
+
+.language_switcher svg {
+  color: var(--color-primary);
+}
+
+.language_list {
+  position: absolute;
+  top: 34px;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+.language_list li {
+  color: var(--fc-secondary);
+  width: 100%;
+  font-size: 0;
+  transition: font-size 0.3s;
+}
+
+.language_list li:last-child a {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.language_list a {
+  display: block;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+}
+
+.language_list span {
+  display: inline-block;
+  height: 100%;
+}
+
+.language_list a:hover,
+.language_list a:focus {
+  opacity: 0.8;
+}
+
+.language_list--opened li {
+  font-size: 1.4rem;
+}
+
+.language_switcher button:has(+ .language_list--opened) {
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 @media screen and (min-width: 350px) {
@@ -269,5 +337,26 @@
 
   .navigation svg {
     display: none;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .language_switcher {
+    order: 1;
+  }
+
+  .search {
+    order: 2;
+  }
+
+  .navigation {
+    order: 3;
+  }
+
+  .language_switcher button:hover,
+  .language_switcher button:focus {
+    opacity: 0.8;
   }
 }

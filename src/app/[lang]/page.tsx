@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 
 import LanguageContext from "@/shared/state/LanguageContext";
 
-import defaultLanguage from "@public/languages/pt.json";
+import defaultLanguage from "@public/languages/pt-BR.json";
 
 import type { ILanguage } from "@/shared/state/LanguageContext";
 import type { Params } from "next/dist/shared/lib/router/utils/route-matcher";
@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     const lang = params.lang;
 
-    if (lang === "pt") {
+    if (lang === "pt-BR") {
       setLanguage(defaultLanguage);
     }
 
