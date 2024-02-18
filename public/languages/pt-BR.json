@@ -4,7 +4,11 @@
     "name": "Português"
   },
   "pages": {
-    "home": "oi world!"
+    "home": {
+      "start": {
+        "title": "Análista de Sistemas"
+      }
+    }
   },
   "components": {
     "header": {

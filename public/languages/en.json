@@ -4,7 +4,11 @@
     "name": "English"
   },
   "pages": {
-    "home": "hello worldzin!"
+    "home": {
+      "start": {
+        "title": "Systems Analyst"
+      }
+    }
   },
   "components": {
     "header": {
