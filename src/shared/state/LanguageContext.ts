@@ -8,7 +8,11 @@ export interface ILanguage {
     name: string;
   };
   pages: {
-    home: string;
+    home: {
+      start: {
+        title: string;
+      };
+    };
   };
   components: {
     header: {
@@ -33,7 +37,11 @@ const defaultContextValue: ILanguageContext = {
       name: "",
     },
     pages: {
-      home: "",
+      home: {
+        start: {
+          title: ""
+        }
+      },
     },
     components: {
       header: {

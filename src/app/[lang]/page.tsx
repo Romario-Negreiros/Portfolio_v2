@@ -7,8 +7,12 @@ import LanguageContext from "@/shared/state/LanguageContext";
 
 import defaultLanguage from "@public/languages/pt-BR.json";
 
+import Link from "next/link";
+
 import type { ILanguage } from "@/shared/state/LanguageContext";
 import type { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+
+import styles from "./styles.module.css";
 
 interface IParams extends Params {
   lang: string;
@@ -44,8 +48,15 @@ export default function Home() {
   }
   return (
     <main className="page-container">
-      {language.pages.home}
-      <div className="spinner"></div>
+      <section id="start" className={styles.start}>
+        <div>
+          <h1>Romario Negreiros</h1>
+          <h2>{language.pages.home.start.title}</h2>
+        </div>
+        <Link download href="">
+          Currículo
+        </Link>
+      </section>
     </main>
   );
 }
