@@ -54,7 +54,7 @@ export default function Home() {
           <h2>{language.pages.home.start.title}</h2>
         </div>
         <Link download href="">
-          Currículo
+          {language.pages.home.start.button}
         </Link>
       </section>
     </main>

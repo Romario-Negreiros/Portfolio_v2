@@ -6,7 +6,8 @@
   "pages": {
     "home": {
       "start": {
-        "title": "Análista de Sistemas"
+        "title": "Análista de Sistemas",
+        "button": "Currículo"
       }
     }
   },

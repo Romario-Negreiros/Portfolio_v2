@@ -11,6 +11,7 @@ export interface ILanguage {
     home: {
       start: {
         title: string;
+        button: string;
       };
     };
   };
@@ -39,8 +40,9 @@ const defaultContextValue: ILanguageContext = {
     pages: {
       home: {
         start: {
-          title: ""
-        }
+          title: "",
+          button: "",
+        },
       },
     },
     components: {

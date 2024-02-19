@@ -6,7 +6,8 @@
   "pages": {
     "home": {
       "start": {
-        "title": "Systems Analyst"
+        "title": "Systems Analyst",
+        "button": "Currículum"
       }
     }
   },
