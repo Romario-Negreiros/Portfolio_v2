@@ -136,11 +136,13 @@
   width: 14px;
 }
 
-.search button:hover svg {
+.search button:hover svg,
+.search button:focus svg {
   color: var(--color-tertiary);
 }
 
-.search .search_clear:hover svg {
+.search .search_clear:hover svg,
+.search .search_clear:focus svg {
   color: var(--indicator-danger);
 }
 
@@ -160,7 +162,8 @@
   color: var(--mob-menu);
 }
 
-.search:has(+ .navigation--visible) .search_enter:hover svg {
+.search:has(+ .navigation--visible) .search_enter:hover svg,
+.search:has(+ .navigation--visible) .search_enter:focus svg {
   color: var(--mob-menu-active);
 }
 

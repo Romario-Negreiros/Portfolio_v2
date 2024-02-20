@@ -82,12 +82,29 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={`${styles.menu} ${isMenuOpened && styles["menu--opened"]}`} onClick={handleMenuOpened}>
+      <div
+        className={`${styles.menu} ${isMenuOpened && styles["menu--opened"]}`}
+        onClick={handleMenuOpened}
+        onKeyDown={(ev) => {
+          if (ev.key === "Enter") {
+            handleMenuOpened();
+          }
+        }}
+        tabIndex={0}
+      >
         <div className={styles.bar_one}></div>
         <div className={styles.bar_two}></div>
         <div className={styles.bar_three}></div>
       </div>
-      <div className={styles.language_switcher}>
+      <div
+        className={styles.language_switcher}
+        onKeyDown={(ev) => {
+          if (ev.key === "Enter") {
+            openLanguageSelection();
+          }
+        }}
+        tabIndex={0}
+      >
         <button type="button" onClick={openLanguageSelection}>
           <LanguageIcon height={25} />
         </button>
