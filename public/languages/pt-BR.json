@@ -7,7 +7,22 @@
     "home": {
       "start": {
         "title": "Análista de Sistemas",
-        "button": "Currículo"
+        "link": {
+          "href": "",
+          "txt": "Currículo"
+        }
+      },
+      "about": {
+        "title": "Sobre mim",
+        "paragraphs": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet velit id ipsum sagittis efficitur eget sed quam. Curabitur eleifend vel ligula vitae sollicitudin.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet velit id ipsum sagittis efficitur eget sed quam. Curabitur eleifend vel ligula vitae sollicitudin.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet velit id ipsum sagittis efficitur eget sed quam. Curabitur eleifend vel ligula vitae sollicitudin."
+        ],
+        "link": {
+          "href": "",
+          "txt": "LinkedIn"
+        }
       }
     }
   },

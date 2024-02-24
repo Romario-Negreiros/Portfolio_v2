@@ -11,8 +11,19 @@ export interface ILanguage {
     home: {
       start: {
         title: string;
-        button: string;
+        link: {
+          href: string;
+          txt: string;
+        };
       };
+      about: {
+        title: string;
+        paragraphs: string[];
+        link: {
+          href: string;
+          txt: string;
+        };
+      }
     };
   };
   components: {
@@ -41,8 +52,19 @@ const defaultContextValue: ILanguageContext = {
       home: {
         start: {
           title: "",
-          button: "",
+          link: {
+            href: "",
+            txt: ""
+          },
         },
+        about: {
+          title: "",
+          paragraphs: [],
+          link: {
+            href: "",
+            txt: ""
+          },
+        }
       },
     },
     components: {
