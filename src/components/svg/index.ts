@@ -7,3 +7,4 @@ export { default as ProjectsIcon } from "./ProjectsIcon";
 export { default as SearchIcon } from "./SearchIcon";
 export { default as StartIcon } from "./StartIcon";
 export { default as LanguageIcon } from "./LanguageIcon";
+export { default as ExperienceIcon } from "./ExperienceIcon";
