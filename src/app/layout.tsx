@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <title>Romario Negreiros</title>
         </head>
         <body>
-          <Header />
+          {language && <Header />}
           {children}
         </body>
       </html>
