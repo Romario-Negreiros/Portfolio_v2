@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0px;
   left: 0px;
@@ -19,7 +19,7 @@
   height: 100vh;
   width: 100%;
   padding: 180px 15px;
-  transform: translateX(-800px);
+  transform: translateX(-900px);
   transition: transform 0.3s ease;
   background-color: var(--color-tertiary);
 }
@@ -299,7 +299,7 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 840px) {
   .menu,
   .menu--opened {
     display: none;
