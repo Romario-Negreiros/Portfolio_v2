@@ -4,7 +4,7 @@
   justify-content: space-between;
   height: calc(100vh - 64px);
   padding: 70px 0;
-  background-image: url("/icons/start-section-illustration.svg");
+  background-image: url("/images/start-section-illustration.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 70%;
@@ -45,6 +45,45 @@
   opacity: 0.8;
 }
 
+.about {
+  min-height: 100vh;
+  max-width: 450px;
+  padding: 30px 0;
+  margin: auto;
+}
+
+.about article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: calc(100vh - 60px);
+}
+
+.about > div {
+  display: none;
+}
+
+.about article p {
+  margin: 20px 0;
+  line-height: 25px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.about article a {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px 4px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  color: var(--fc-primary);
+  background-color: var(--color-tertiary);
+}
+
 @media screen and (min-width: 350px) {
   .start {
     padding: 50px 0;
@@ -52,6 +91,10 @@
 
   .start div {
     letter-spacing: 0.2px;
+  }
+
+  .about article p {
+    margin: 30px 0;
   }
 }
 
@@ -67,6 +110,10 @@
   .start div h2 {
     font-size: 2rem;
   }
+
+  .about article h2 {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -79,18 +126,22 @@
 
   .start div,
   .start a {
-    max-width: 300px;
+    max-width: 320px;
     margin: unset;
   }
 
   .start div {
     padding-bottom: 40px;
   }
+
+  .about article h2 {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .start {
-    background-size: 500px;
+    background-size: 450px;
   }
 
   .start div {
@@ -105,14 +156,58 @@
   .start div h2 {
     font-size: 2.2rem;
   }
+
+  .about {
+    display: flex;
+    align-items: center;
+    margin: unset;
+    max-width: unset;
+    padding: 30px 0px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about article {
+    max-width: 450px;
+  }
+
+  .about article p {
+    font-size: 1.05rem;
+  }
+
+  .about > div {
+    display: grid;
+    place-items: center;
+    width: 500px;
+  }
+
+  .about article a {
+    margin: unset;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .start {
+    background-size: 600px;
+  }
+
   .start div h1 {
     font-size: 2.6rem;
   }
 
   .start div h2 {
     font-size: 2.4rem;
+  }
+
+  .about article {
+    max-width: 600px;
+  }
+
+  .about article h2 {
+    font-size: 2rem;
+  }
+
+  .about article p {
+    font-size: 1.1rem;
   }
 }

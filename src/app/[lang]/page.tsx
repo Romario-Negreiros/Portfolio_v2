@@ -8,6 +8,9 @@ import LanguageContext from "@/shared/state/LanguageContext";
 import defaultLanguage from "@public/languages/pt-BR.json";
 
 import Link from "next/link";
+import { Animation } from "@/components";
+
+import FloatingLaptop from "@public/animations/floating-laptop.json";
 
 import type { ILanguage } from "@/shared/state/LanguageContext";
 import type { Params } from "next/dist/shared/lib/router/utils/route-matcher";
@@ -53,9 +56,25 @@ export default function Home() {
           <h1>Romario Negreiros</h1>
           <h2>{language.pages.home.start.title}</h2>
         </div>
-        <Link download href="">
-          {language.pages.home.start.button}
+        <Link download href={language.pages.home.start.link.href}>
+          {language.pages.home.start.link.txt}
         </Link>
+      </section>
+      <section id="about" className={styles.about}>
+        <article>
+          <h2>{language.pages.home.about.title}</h2>
+          <div>
+            {language.pages.home.about.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          <Link download href={language.pages.home.about.link.href}>
+            {language.pages.home.about.link.txt}
+          </Link>
+        </article>
+        <div>
+          <Animation animationData={FloatingLaptop} width={400} height={400} />
+        </div>
       </section>
     </main>
   );
