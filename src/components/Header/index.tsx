@@ -5,15 +5,16 @@ import { useState, useEffect, useContext } from "react";
 import LanguageContext from "@/shared/state/LanguageContext";
 
 import {
+  LogoIcon,
+  LanguageIcon,
   StartIcon,
   AboutMeIcon,
   ProjectsIcon,
-  BlogIcon,
+  ExperienceIcon,
   ContactIcon,
-  LogoIcon,
+  BlogIcon,
   SearchIcon,
   ClearIcon,
-  LanguageIcon,
 } from "..";
 import Link from "next/link";
 
@@ -36,8 +37,10 @@ function renderIcon(index: number) {
     case 2:
       return <ProjectsIcon width={18} />;
     case 3:
-      return <ContactIcon width={18} />;
+      return <ExperienceIcon width={18} />;
     case 4:
+      return <ContactIcon width={18} />;
+    case 5:
       return <BlogIcon width={18} />;
   }
 }
