@@ -1,7 +1,4 @@
-import { Animation } from "..";
 import Link from "next/link";
-
-import FloatingLaptop from "@public/animations/floating-laptop.json";
 
 import type { ILanguage } from "@/shared/state/LanguageContext";
 
@@ -25,9 +22,6 @@ export default function About({ language }: Props) {
             {language.pages.home.about.link.txt}
           </Link>
         </article>
-        <div>
-          <Animation animationData={FloatingLaptop} width={400} height={400} />
-        </div>
-      </section>
+    </section>
   )
 }
