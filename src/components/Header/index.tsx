@@ -5,7 +5,6 @@ import { useState, useEffect, useContext } from "react";
 import LanguageContext from "@/shared/state/LanguageContext";
 
 import {
-  LogoIcon,
   LanguageIcon,
   StartIcon,
   AboutMeIcon,
@@ -88,12 +87,6 @@ export default function Header() {
       <div
         className={`${styles.menu} ${isMenuOpened && styles["menu--opened"]}`}
         onClick={handleMenuOpened}
-        onKeyDown={(ev) => {
-          if (ev.key === "Enter") {
-            handleMenuOpened();
-          }
-        }}
-        tabIndex={0}
       >
         <div className={styles.bar_one}></div>
         <div className={styles.bar_two}></div>
@@ -101,12 +94,6 @@ export default function Header() {
       </div>
       <div
         className={styles.language_switcher}
-        onKeyDown={(ev) => {
-          if (ev.key === "Enter") {
-            openLanguageSelection();
-          }
-        }}
-        tabIndex={0}
       >
         <button type="button" onClick={openLanguageSelection}>
           <LanguageIcon height={25} />
@@ -120,9 +107,6 @@ export default function Header() {
             </li>
           ))}
         </ul>
-      </div>
-      <div className={styles.logo}>
-        <LogoIcon width={20} />
       </div>
       <form className={styles.search} autoComplete="off" onSubmit={onSearchSubmit}>
         <input name="search" onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
