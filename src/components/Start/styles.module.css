@@ -1,7 +1,7 @@
 .start {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   min-height: calc(100vh - 64px);
   padding: 70px 0;
 }
@@ -12,11 +12,11 @@
 }
 
 .start div h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .start div h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .start a {
