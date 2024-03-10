@@ -2,34 +2,30 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
   padding: 70px 0;
-  background-image: url("/images/start-section-illustration.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 70%;
 }
 
 .start div {
+  font-weight: bolder;
   color: var(--fc-primary);
 }
 
 .start div h1 {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
 }
 
 .start div h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .start a {
   display: block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  padding: 10px 4px;
+  padding: 15px 0;
   border-radius: 5px;
-  color: var(--fc-primary);
   background-color: var(--color-tertiary);
 }
 
@@ -49,42 +45,28 @@
   .start {
     padding: 50px 0;
   }
-
-  .start div {
-    letter-spacing: 0.2px;
-  }
-}
-
-@media screen and (min-width: 400px) {
-  .start {
-    background-size: 350px;
-  }
-
-  .start div h1 {
-    font-size: 2.2rem;
-  }
-
-  .start div h2 {
-    font-size: 2rem;
-  }
 }
 
 @media screen and (min-width: 769px) {
   .start {
     justify-content: center;
     gap: 20px;
-    background-position: right center;
     padding: 50px;
-  }
-
-  .start div,
-  .start a {
-    max-width: 320px;
-    margin: unset;
+    background-image: url("/images/start-section-illustration.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 350px;
   }
 
   .start div {
+    max-width: 320px;
     padding-bottom: 40px;
+    margin: unset;
+  }
+
+  .start a {
+    max-width: 250px;
+    margin: unset;
   }
 }
 
@@ -94,16 +76,15 @@
   }
 
   .start div {
-    letter-spacing: 2px;
     max-width: unset;
   }
 
   .start div h1 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 
   .start div h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -113,10 +94,10 @@
   }
 
   .start div h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 
   .start div h2 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
