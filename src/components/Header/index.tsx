@@ -23,8 +23,26 @@ function setBorderOnSearch() {
   document.querySelector("." + styles.search)?.classList.toggle(styles["search--focused"]);
 }
 
-function openLanguageSelection() {
-  document.querySelector("." + styles.language_list)?.classList.toggle(styles["language_list--opened"]);
+function handleLanguageSelector(ev: React.MouseEvent<HTMLElement> | MouseEvent) {
+  ev.stopPropagation();
+
+  const languageSelector = document.querySelector("." + styles.language_list);
+
+  if (languageSelector) {
+    const className = styles["language_list--opened"];
+
+    languageSelector.classList.toggle(className);
+
+    if (languageSelector.classList.contains(className)) {
+      window.addEventListener("click", handleWindowClickToRemoveLanguageSelectorFocus);
+    } else {
+      window.removeEventListener("click", handleWindowClickToRemoveLanguageSelectorFocus);
+    }
+  }
+}
+
+function handleWindowClickToRemoveLanguageSelectorFocus(ev: MouseEvent) {
+  handleLanguageSelector(ev);
 }
 
 function renderIcon(index: number) {
@@ -84,24 +102,19 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div
-        className={`${styles.menu} ${isMenuOpened && styles["menu--opened"]}`}
-        onClick={handleMenuOpened}
-      >
+      <button className={`${styles.menu} ${isMenuOpened && styles["menu--opened"]}`} onClick={handleMenuOpened}>
         <div className={styles.bar_one}></div>
         <div className={styles.bar_two}></div>
         <div className={styles.bar_three}></div>
-      </div>
-      <div
-        className={styles.language_switcher}
-      >
-        <button type="button" onClick={openLanguageSelection}>
+      </button>
+      <div className={styles.language_switcher}>
+        <button type="button" onClick={handleLanguageSelector}>
           <LanguageIcon height={25} />
         </button>
         <ul className={styles.language_list}>
           {language?.components.header.langSwitch.map((item) => (
             <li key={item.name}>
-              <Link href={"/" + item.attr} onClick={openLanguageSelection}>
+              <Link href={"/" + item.attr} onClick={handleLanguageSelector}>
                 <span>{item.name}</span>
               </Link>
             </li>
