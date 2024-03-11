@@ -122,7 +122,7 @@ export default function Header() {
         </ul>
       </div>
       <form className={styles.search} autoComplete="off" onSubmit={onSearchSubmit}>
-        <input name="search" onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
+        <input name="search" placeholder={language?.components.header.search.placeholder} onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
         <div>
           <button className={styles.search_clear}>
             <ClearIcon />

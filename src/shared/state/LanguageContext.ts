@@ -32,6 +32,9 @@ export interface ILanguage {
         attr: string;
         name: string;
       }>;
+      search: {
+        placeholder: string;
+      };
       nav: string[];
     };
   };
@@ -70,6 +73,9 @@ const defaultContextValue: ILanguageContext = {
     components: {
       header: {
         langSwitch: [],
+        search: {
+          placeholder: ""
+        },
         nav: [],
       },
     },

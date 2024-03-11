@@ -38,6 +38,9 @@
           "name": "🇧🇷"
         }
       ],
+      "search": {
+        "placeholder": "Com pressa?"
+      },
       "nav": [
         "Início",
         "Sobre",

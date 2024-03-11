@@ -37,12 +37,7 @@
   padding: 20px 3px 5px;
   font-size: 1em;
   font-weight: 500;
-  border-bottom: 2px solid var(--color-primary);
-  color: var(--color-primary);
-}
-
-.navigation a svg {
-  color: var(--color-tertiary);
+  border-bottom: 2px solid;
 }
 
 .navigation a:hover,
@@ -54,20 +49,6 @@
   transform: translateX(0);
 }
 
-.navigation--visible a,
-.navigation--visible a svg {
-  color: var(--mob-menu);
-  border-bottom-color: var(--mob-menu);
-}
-
-.navigation--visible a:hover,
-.navigation--visible a:focus,
-.navigation--visible a:hover svg,
-.navigation--visible a:focus svg {
-  color: var(--mob-menu-active);
-  border-bottom-color: var(--mob-menu);
-}
-
 .search {
   display: flex;
   justify-content: space-between;
@@ -77,8 +58,9 @@
   width: 100%;
   padding: 0 10px;
   height: 34px;
-  border: 2px solid var(--color-primary);
+  border-bottom: 2px solid transparent;
   border-radius: 5px;
+  background-color: var(--element-bg);
 }
 
 .search input {
@@ -93,6 +75,9 @@
 
 .search:hover,
 .search--focused {
+  backdrop-filter: brightness(0.5);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   border-color: var(--color-tertiary);
 }
 
@@ -130,29 +115,16 @@
   color: var(--indicator-danger);
 }
 
-.search:has(+ .navigation--visible) {
-  border-color: var(--mob-menu);
-}
-
-.search:has(+ .navigation--visible) svg {
-  color: var(--mob-menu);
-}
-
-.search:has(+ .navigation--visible):hover,
-.search--focused:has(+ .navigation--visible) {
-  border-color: var(--mob-menu-active);
-}
 .search:has(+ .navigation--visible) input::placeholder {
-  color: var(--mob-menu);
+  color: #bbbbbb;
 }
 
-.search:has(+ .navigation--visible) .search_enter:hover svg,
-.search:has(+ .navigation--visible) .search_enter:focus svg {
-  color: var(--mob-menu-active);
+.search:has(+ .navigation--visible):hover {
+  color: #ffffff;
 }
 
 .search:has(+ .navigation--visible) input {
-  color: var(--mob-menu-active);
+  color: #ffffff;
 }
 
 .menu {
@@ -196,11 +168,7 @@
 }
 
 .menu--opened div {
-  background-color: var(--mob-menu-active);
-}
-
-.menu--opened + .logo svg {
-  color: var(--mob-menu-active);
+  background-color: #ffffff;
 }
 
 .language_switcher {
@@ -276,12 +244,17 @@
     flex-flow: row nowrap;
   }
 
+  .menu {
+    order: 1;
+  }
+
   .search {
+    order: 2;
     width: 70%;
     max-width: 400px;
   }
 
-  .language_list {
+  .language_switcher {
     order: 3;
   }
 }
@@ -325,6 +298,10 @@
   }
 
   .search {
+    order: 0;
+  }
+
+  .language_switcher {
     order: 0;
   }
 
