@@ -7,3 +7,8 @@
   border-radius: 5px;
   background-color: var(--link-button-bg);
 }
+
+.container:hover,
+.container:focus {
+  opacity: 0.8;
+}

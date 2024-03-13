@@ -26,11 +26,6 @@
   margin: 0 auto;
 }
 
-.start a:hover,
-.start a:focus {
-  opacity: 0.8;
-}
-
 @media screen and (min-width: 350px) {
   .start {
     padding: 50px 0;
