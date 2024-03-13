@@ -19,16 +19,6 @@
   font-size: 1.6rem;
 }
 
-.start a {
-  display: block;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 15px 0;
-  border-radius: 5px;
-  background-color: var(--color-tertiary);
-}
-
 .start div,
 .start a {
   width: 100%;
@@ -44,6 +34,12 @@
 @media screen and (min-width: 350px) {
   .start {
     padding: 50px 0;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .start div h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -96,7 +92,6 @@
   .start div h1 {
     font-size: 3rem;
   }
-
   .start div h2 {
     font-size: 2.2rem;
   }

@@ -21,7 +21,7 @@
   padding: 180px 15px;
   transform: translateX(-900px);
   transition: transform 0.3s ease;
-  background-color: var(--color-tertiary);
+  background-color: var(--link-button-bg);
 }
 
 .navigation ul {
@@ -78,7 +78,7 @@
   backdrop-filter: brightness(0.5);
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  border-color: var(--color-tertiary);
+  border-color: var(--link-button-bg);
 }
 
 .search div {
@@ -107,7 +107,7 @@
 
 .search button:hover svg,
 .search button:focus svg {
-  color: var(--color-tertiary);
+  color: var(--link-button-bg);
 }
 
 .search .search_clear:hover svg,
@@ -289,8 +289,8 @@
   .navigation a:hover,
   .navigation a:focus {
     backdrop-filter: unset;
-    color: var(--color-tertiary);
-    border-color: var(--color-tertiary);
+    color: var(--link-button-bg);
+    border-color: var(--link-button-bg);
   }
 
   .navigation svg {

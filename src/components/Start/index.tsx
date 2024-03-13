@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LinkButton } from "..";
 
 import type { ILanguage } from "@/shared/state/LanguageContext";
 
@@ -15,9 +15,7 @@ export default function Start({ language }: Props) {
           <h1>Romario Negreiros</h1>
           <h2>{language.pages.home.start.title}</h2>
         </div>
-        <Link download href={language.pages.home.start.link.href}>
-          {language.pages.home.start.link.txt}
-        </Link>
+        <LinkButton text={language.pages.home.start.link.txt} href={language.pages.home.start.link.href} isDownload={true} />
       </section>
   );
 }

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LinkButton } from "..";
 
 import type { ILanguage } from "@/shared/state/LanguageContext";
 
@@ -18,9 +18,7 @@ export default function About({ language }: Props) {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <Link download href={language.pages.home.about.link.href}>
-            {language.pages.home.about.link.txt}
-          </Link>
+          <LinkButton text={language.pages.home.about.link.txt} href={language.pages.home.about.link.href} />
         </article>
     </section>
   )
