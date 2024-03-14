@@ -64,7 +64,7 @@ function renderIcon(index: number) {
 
 export default function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const { language } = useContext(LanguageContext);
+  const { nav, search, langSwitch } = useContext(LanguageContext).language!.components.header;
 
   function handleMenuOpened() {
     document.querySelector("body")?.classList.toggle("body--noOverflow");
@@ -112,7 +112,7 @@ export default function Header() {
           <LanguageIcon height={25} />
         </button>
         <ul className={styles.language_list}>
-          {language?.components.header.langSwitch.map((item) => (
+          {langSwitch.map((item) => (
             <li key={item.name}>
               <Link href={"/" + item.attr} onClick={handleLanguageSelector}>
                 <span>{item.name}</span>
@@ -122,7 +122,7 @@ export default function Header() {
         </ul>
       </div>
       <form className={styles.search} autoComplete="off" onSubmit={onSearchSubmit}>
-        <input name="search" placeholder={language?.components.header.search.placeholder} onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
+        <input name="search" placeholder={search.placeholder} onFocus={setBorderOnSearch} onBlur={setBorderOnSearch} />
         <div>
           <button className={styles.search_clear}>
             <ClearIcon />
@@ -134,7 +134,7 @@ export default function Header() {
       </form>
       <nav className={`${styles.navigation} ${isMenuOpened && styles["navigation--visible"]}`}>
         <ul>
-          {language?.components.header.nav.map((item, index) => (
+          {nav.map((item, index) => (
             <li key={item} className={styles.navigation_item}>
               <Link href="">
                 <span>{item}</span>

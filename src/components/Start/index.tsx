@@ -9,13 +9,15 @@ interface Props {
 }
 
 export default function Start({ language }: Props) {
+  const { title, link } = language.pages.home.start;
+
   return (
     <section id="start" className={styles.start}>
         <div>
           <h1>Romario Negreiros</h1>
-          <h2>{language.pages.home.start.title}</h2>
+          <h2>{title}</h2>
         </div>
-        <LinkButton text={language.pages.home.start.link.txt} href={language.pages.home.start.link.href} isDownload={true} />
+        <LinkButton text={link.txt} href={link.href} isDownload={true} />
       </section>
   );
 }

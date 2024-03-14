@@ -9,16 +9,18 @@ interface Props {
 }
 
 export default function About({ language }: Props) {
+  const { title, paragraphs, link } = language.pages.home.about;
+
   return (
     <section id="about" className={styles.about}>
         <article>
-          <h2>{language.pages.home.about.title}</h2>
+          <h2>{title}</h2>
           <div>
-            {language.pages.home.about.paragraphs.map((paragraph, index) => (
+            {paragraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <LinkButton text={language.pages.home.about.link.txt} href={language.pages.home.about.link.href} />
+          <LinkButton text={link.txt} href={link.href} />
         </article>
     </section>
   )
