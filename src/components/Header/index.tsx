@@ -135,9 +135,9 @@ export default function Header() {
       <nav className={`${styles.navigation} ${isMenuOpened && styles["navigation--visible"]}`}>
         <ul>
           {nav.map((item, index) => (
-            <li key={item} className={styles.navigation_item}>
-              <Link href="">
-                <span>{item}</span>
+            <li key={item.txt} className={styles.navigation_item}>
+              <Link href={item.href}>
+                <span>{item.txt}</span>
                 {renderIcon(index)}
               </Link>
             </li>

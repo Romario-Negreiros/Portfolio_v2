@@ -41,12 +41,30 @@
         "placeholder": "In a hurry?"
       },
       "nav": [
-        "Start",
-        "About",
-        "Projects",
-        "Experience",
-        "Contact",
-        "Blog"
+        {
+          "href": "#start",
+          "txt": "Start"
+        },
+        {
+          "href": "#about",
+          "txt": "About"
+        },
+        {
+          "href": "#projects",
+          "txt": "Projects"
+        },
+        {
+          "href": "#experience",
+          "txt": "Experience"
+        },
+        {
+          "href": "#contact",
+          "txt": "Contact"
+        },
+        {
+          "href": "/blog",
+          "txt": "Blog"
+        }
       ]
     }
   }

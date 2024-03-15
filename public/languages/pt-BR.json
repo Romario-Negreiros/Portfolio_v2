@@ -41,12 +41,30 @@
         "placeholder": "Com pressa?"
       },
       "nav": [
-        "Início",
-        "Sobre",
-        "Projetos",
-        "Experiência",
-        "Contato",
-        "Blog"
+        {
+          "href": "#start",
+          "txt": "Início"
+        },
+        {
+          "href": "#about",
+          "txt": "Sobre"
+        },
+        {
+          "href": "#projects",
+          "txt": "Projetos"
+        },
+        {
+          "href": "#experience",
+          "txt": "Experiência"
+        },
+        {
+          "href": "#contact",
+          "txt": "Contato"
+        },
+        {
+          "href": "/blog",
+          "txt": "Blog"
+        }
       ]
     }
   }

@@ -35,7 +35,10 @@ export interface ILanguage {
       search: {
         placeholder: string;
       };
-      nav: string[];
+      nav: Array<{
+        href: string;
+        txt: string;
+      }>;
     };
   };
 }
