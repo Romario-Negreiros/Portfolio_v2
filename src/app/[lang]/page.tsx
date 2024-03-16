@@ -7,7 +7,7 @@ import LanguageContext from "@/shared/state/LanguageContext";
 
 import defaultLanguage from "@public/languages/pt-BR.json";
 
-import { Start, About } from "@/components";
+import { Start, About, Projects } from "@/components";
 
 import type { ILanguage } from "@/shared/state/LanguageContext";
 import type { Params } from "next/dist/shared/lib/router/utils/route-matcher";
@@ -48,6 +48,7 @@ export default function Home() {
     <main className="page-container">
       <Start language={language} />
       <About language={language} />
+      <Projects language={language} />
     </main>
   );
 }
