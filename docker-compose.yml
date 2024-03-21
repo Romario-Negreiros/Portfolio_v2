@@ -7,7 +7,10 @@ services:
       target: base # Target defined in Dockerfile to build
     ports:
       - 3000:3000
-      # This bind mount allows changes on the host file system to affect the container.
+      # If you want to persist data even after a container is deleted, you can use a volume.
+      # A volume is a location in your local filesystem, managed by Docker.
+      # Volumes are used to provide persistent storage or to share files between the host and the container.
+      # (NOT USED HERE) The <volume_path>:delegate bind mount allows changes on the host file system to affect the container.
       # Saving a code file can cause an incremental build, a hot reload in the browser,
       # and a reconnection of the debugger.
       # The mount is in delegated mode:
