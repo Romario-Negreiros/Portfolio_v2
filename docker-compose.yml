@@ -1,0 +1,24 @@
+services:
+  portfolio_v2: # Service name
+    image: portfolio_v2 # Image name
+    build: # Where to look for the dockerfile
+      context: .
+      dockerfile: Dockerfile
+      target: base # Target defined in Dockerfile to build
+    ports:
+      - 3000:3000
+      # If you want to persist data even after a container is deleted, you can use a volume.
+      # A volume is a location in your local filesystem, managed by Docker.
+      # Volumes are used to provide persistent storage or to share files between the host and the container.
+      # (NOT USED HERE) The <volume_path>:delegate bind mount allows changes on the host file system to affect the container.
+      # Saving a code file can cause an incremental build, a hot reload in the browser,
+      # and a reconnection of the debugger.
+      # The mount is in delegated mode:
+      # Changes on the host, like saving a code file, immediately affect the container.
+      # Changes within the container, like build output, make their way back to the host,
+      # but are not strictly synchronized.
+    volumes: 
+      - /app/node_modules
+      - .:/app
+    container_name: portfolio_v2 # Name of the container
+    command: npm run dev # Command to run when the container starts
