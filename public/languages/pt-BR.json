@@ -9,7 +9,7 @@
         "title": "Análista de Sistemas",
         "link": {
           "href": "",
-          "txt": "Currículo"
+          "text": "Currículo"
         }
       },
       "about": {
@@ -20,8 +20,131 @@
         ],
         "link": {
           "href": "",
-          "txt": "LinkedIn"
+          "text": "LinkedIn"
         }
+      },
+      "projects": {
+        "title": "Projetos",
+        "projects": [
+          {
+            "img": "/images/retrogames-snapshot.png24",
+            "title": "Retrogames",
+            "description": "Site de jogos clássicos (no momento apenas um), porém online.",
+            "visit": {
+              "href": "https://retrogames-green.vercel.app/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "NextJS",
+              "TypeScript",
+              "CSS Modules",
+              "Firebase"
+            ]
+          },
+          {
+            "img": "/images/changix-snapshot.png24",
+            "title": "Changix",
+            "description": "Um site os usuários compartilharem produtos que não desejam mais, e trocarem por algo que lhe interessem.",
+            "visit": {
+              "href": "https://changix.vercel.app/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "NextJS",
+              "TypeScript",
+              "CSS Modules",
+              "Firebase"
+            ]
+          },
+          {
+            "img": "/images/space-tourism-snapshot.png24",
+            "title": "Space Tourism",
+            "description": "Desafio do front end mentor, um site com algumas páginas sobre o espaço.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Space-Tourism/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "SASS",
+              "Javascript"
+            ]
+          },
+          {
+            "img": "/images/yourjob-snapshot.png24",
+            "title": "YourJob",
+            "description": "Um site para anúncio e procura de ofertas de emprego.",
+            "visit": {
+              "href": "https://yourjob.vercel.app",
+              "text": "Visitar"
+            },
+            "stack": [
+              "React",
+              "MaterialUI",
+              "Typescript",
+              "NodeJS",
+              "PostgreSQL"
+            ]
+          },
+          {
+            "img": "/images/fireswift-snapshot.png24",
+            "title": "FireSwift",
+            "description": "Uma mini rede-social.",
+            "visit": {
+              "href": "https://fire-swift.vercel.app/home",
+              "text": "Visitar"
+            },
+            "stack": [
+              "React",
+              "Styled Components",
+              "Typescript",
+              "Firebase"
+            ]
+          },
+          {
+            "img": "/images/country-searcher-snapshot.png24",
+            "title": "Country Search",
+            "description": "Desafio do front end mentor, uma wiki sobre os países do mundo todo.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Rest-API-Countries/index.html",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "CSS",
+              "Javascript"
+            ]
+          },
+          {
+            "img": "/images/easybank-snapshot.png24",
+            "title": "Easybank",
+            "description": "Desafio do front end mentor, uma landing page sobre um banco fictício.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Easybank/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "CSS",
+              "Javascript"
+            ]
+          },
+          {
+            "img": "/images/ip-address-tracker-snapshot.png24",
+            "title": "IP address tracker",
+            "description": "Desafio do front end mentor, site para buscar dados de um IP ou domínio.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Ip-address-tracker/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "SASS",
+              "JQuery",
+              "Javascript"
+            ]
+          }
+        ]
       }
     }
   },
@@ -43,27 +166,27 @@
       "nav": [
         {
           "href": "#start",
-          "txt": "Início"
+          "text": "Início"
         },
         {
           "href": "#about",
-          "txt": "Sobre"
+          "text": "Sobre"
         },
         {
           "href": "#projects",
-          "txt": "Projetos"
+          "text": "Projetos"
         },
         {
           "href": "#experience",
-          "txt": "Experiência"
+          "text": "Experiência"
         },
         {
           "href": "#contact",
-          "txt": "Contato"
+          "text": "Contato"
         },
         {
           "href": "/blog",
-          "txt": "Blog"
+          "text": "Blog"
         }
       ]
     }

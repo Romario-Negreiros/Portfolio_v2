@@ -9,7 +9,7 @@
         "title": "Systems Analyst",
         "link": {
           "href": "",
-          "txt": "Currículum"
+          "text": "Currículum"
         }
       },
       "about": {
@@ -20,8 +20,131 @@
         ],
         "link": {
           "href": "",
-          "txt": "LinkedIn"
+          "text": "LinkedIn"
         }
+      },
+      "projects": {
+        "title": "Projects",
+        "projects": [
+          {
+            "img": "/images/retrogames-snapshot.png24",
+            "title": "Retrogames",
+            "description": "Classig online games (one).",
+            "visit": {
+              "href": "https://retrogames-green.vercel.app/",
+              "text": "Visit"
+            },
+            "stack": [
+              "NextJS",
+              "TypeScript",
+              "CSS Modules",
+              "Firebase"
+            ]
+          },
+          {
+            "img": "/images/changix-snapshot.png24",
+            "title": "Changix",
+            "description": "A stuff exchanging website.",
+            "visit": {
+              "href": "https://changix.vercel.app/",
+              "text": "Visit"
+            },
+            "stack": [
+              "NextJS",
+              "TypeScript",
+              "CSS Modules",
+              "Firebase"
+            ]
+          },
+          {
+            "img": "/images/space-tourism-snapshot.png24",
+            "title": "Space Tourism",
+            "description": "A multi-page website about the space.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Space-Tourism/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "SASS",
+              "Javascript"
+            ]
+          },
+          {
+            "img": "/images/yourjob-snapshot.png24",
+            "title": "YourJob",
+            "description": "A job seeking and offering website.",
+            "visit": {
+              "href": "https://yourjob.vercel.app",
+              "text": "Visitar"
+            },
+            "stack": [
+              "React",
+              "MaterialUI",
+              "Typescript",
+              "NodeJS",
+              "PostgreSQL"
+            ]
+          },
+          {
+            "img": "/images/fireswift-snapshot.png24",
+            "title": "FireSwift",
+            "description": "A little social-media.",
+            "visit": {
+              "href": "https://fire-swift.vercel.app/home",
+              "text": "Visitar"
+            },
+            "stack": [
+              "React",
+              "Styled Components",
+              "Typescript",
+              "Firebase"
+            ]
+          },
+          {
+            "img": "/images/country-searcher-snapshot.png24",
+            "title": "Country Search",
+            "description": "Wiki about world countries.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Rest-API-Countries/index.html",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "CSS",
+              "Javascript"
+            ]
+          },
+          {
+            "img": "/images/easybank-snapshot.png24",
+            "title": "Easybank",
+            "description": "Landing page about a made up bank.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Easybank/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "CSS",
+              "Javascript"
+            ]
+          },
+          {
+            "img": "/images/ip-address-tracker-snapshot.png24",
+            "title": "IP address tracker",
+            "description": "Search for IP address or domain data.",
+            "visit": {
+              "href": "https://romario-negreiros.github.io/Ip-address-tracker/",
+              "text": "Visitar"
+            },
+            "stack": [
+              "HTML",
+              "SASS",
+              "JQuery",
+              "Javascript"
+            ]
+          }
+        ]
       }
     }
   },
@@ -43,27 +166,27 @@
       "nav": [
         {
           "href": "#start",
-          "txt": "Start"
+          "text": "Start"
         },
         {
           "href": "#about",
-          "txt": "About"
+          "text": "About"
         },
         {
           "href": "#projects",
-          "txt": "Projects"
+          "text": "Projects"
         },
         {
           "href": "#experience",
-          "txt": "Experience"
+          "text": "Experience"
         },
         {
           "href": "#contact",
-          "txt": "Contact"
+          "text": "Contact"
         },
         {
           "href": "/blog",
-          "txt": "Blog"
+          "text": "Blog"
         }
       ]
     }
