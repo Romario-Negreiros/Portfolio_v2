@@ -17,7 +17,7 @@ export default function Start({ language }: Props) {
           <h1>Romario Negreiros</h1>
           <h2>{title}</h2>
         </div>
-        <LinkButton text={link.txt} href={link.href} isDownload={true} />
+        <LinkButton text={link.text} href={link.href} isDownload={true} />
       </section>
   );
 }

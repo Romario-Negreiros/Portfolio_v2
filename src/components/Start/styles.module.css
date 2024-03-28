@@ -42,7 +42,7 @@
   .start {
     justify-content: center;
     gap: 20px;
-    padding: 50px;
+    padding: 20px;
     background-image: url("/images/start-section-illustration.svg");
     background-repeat: no-repeat;
     background-position: right center;
@@ -76,6 +76,12 @@
 
   .start div h2 {
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .start {
+    padding: 40px;
   }
 }
 

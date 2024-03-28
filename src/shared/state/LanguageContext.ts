@@ -2,6 +2,17 @@ import { createContext } from "react";
 
 import type { SetStateAction, Dispatch } from "react";
 
+interface IProject {
+  img: string;
+  title: string;
+  description: string;
+  visit: {
+    href: string;
+    text: string;
+  };
+  stack: string[];
+}
+
 export interface ILanguage {
   lang: {
     attr: string;
@@ -13,7 +24,7 @@ export interface ILanguage {
         title: string;
         link: {
           href: string;
-          txt: string;
+          text: string;
         };
       };
       about: {
@@ -21,9 +32,13 @@ export interface ILanguage {
         paragraphs: string[];
         link: {
           href: string;
-          txt: string;
+          text: string;
         };
-      }
+      };
+      projects: {
+        title: string;
+        projects: IProject[];
+      };
     };
   };
   components: {
@@ -37,7 +52,7 @@ export interface ILanguage {
       };
       nav: Array<{
         href: string;
-        txt: string;
+        text: string;
       }>;
     };
   };
@@ -60,7 +75,7 @@ const defaultContextValue: ILanguageContext = {
           title: "",
           link: {
             href: "",
-            txt: ""
+            text: "",
           },
         },
         about: {
@@ -68,16 +83,20 @@ const defaultContextValue: ILanguageContext = {
           paragraphs: [],
           link: {
             href: "",
-            txt: ""
+            text: "",
           },
-        }
+        },
+        projects: {
+          title: "",
+          projects: [],
+        },
       },
     },
     components: {
       header: {
         langSwitch: [],
         search: {
-          placeholder: ""
+          placeholder: "",
         },
         nav: [],
       },

@@ -1,0 +1,182 @@
+.projects {
+  min-height: 100vh;
+  padding: 40px 0px 0;
+}
+
+.projects h2 {
+  max-width: 441px;
+  margin: 0 auto 20px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.carousel {
+  max-width: 441px;
+  height: 70vh;
+  border-radius: 5px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--element-bg);
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.slide figure div {
+  position: relative;
+  height: clamp(120px, 40vw, 207px);
+}
+
+.slide figcaption {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  background-color: var(--element-bg);
+}
+
+.slide article, .slide ul, .slide a {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.slide ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-flow: row wrap;
+}
+
+.slide li {
+  padding: 5px;
+  background-color: var(--element-bg);
+}
+
+.slide a {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  padding: 5px 20px;
+  border-radius: 0;
+}
+
+.card_list {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .projects {
+    padding: 30px;
+  }
+
+  .projects h2 {
+    margin: 0;
+  }
+
+  .carousel {
+    display: none;
+  }
+
+  .card_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 30px auto 0;
+    max-width: 1200px;
+  }
+
+  .card {
+    background-color: var(--element-bg);
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .card figure div {
+    position: relative;
+    height: clamp(157px, 20vw, 260px);
+  }
+  
+  .card figcaption {
+    width: 100%;
+    font-weight: 700;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    background-color: var(--element-bg);
+  }
+
+  .card article {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .card ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-flow: row wrap;
+  }
+  
+  .card li {
+    padding: 8px;
+    background-color: var(--element-bg);
+  }
+  
+  .card article a {
+    padding: 8px 20px;
+    border-radius: 0;
+    width: fit-content;
+  }
+
+  .card article p,
+  .card article li,
+  .card article a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .projects {
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .card figcaption {
+    padding: 5px 15px;
+    font-size: 1.4rem;
+  }
+
+  .card article {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card article ul, .card article div {
+    gap: 15px;
+  }
+
+  .card article li {
+    padding: 12px;
+  }
+
+  .card article div a {
+    padding: 12px 24px;
+  }
+
+  .card article p,
+  .card article li,
+  .card article div a {
+    font-size: 1.3rem;
+  }
+}

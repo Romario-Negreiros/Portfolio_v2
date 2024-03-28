@@ -20,7 +20,7 @@ export default function About({ language }: Props) {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <LinkButton text={link.txt} href={link.href} />
+          <LinkButton text={link.text} href={link.href} />
         </article>
     </section>
   )
