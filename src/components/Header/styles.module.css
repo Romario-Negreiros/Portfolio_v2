@@ -242,7 +242,7 @@
 @media screen and (min-width: 400px) {
   .header {
     flex-flow: row nowrap;
-    padding: 15px 30px;
+    padding: 30px;
   }
 
   .menu {
