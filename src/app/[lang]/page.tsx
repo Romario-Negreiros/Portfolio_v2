@@ -24,7 +24,7 @@ export default function Home() {
     const lang = params.lang;
 
     if (lang === "pt-BR") {
-      setLanguage(defaultLanguage);
+      setLanguage(defaultLanguage as ILanguage);
     }
 
     import(`@public/languages/${lang}.json`)

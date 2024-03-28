@@ -14,7 +14,7 @@ export default function Redirect() {
     if (supportedLanguages.some((supLang) => supLang === lang)) {
       push("/" + lang);
     } else {
-      push("/en");
+      push("/pt-BR");
     }
   }, [push]);
 
